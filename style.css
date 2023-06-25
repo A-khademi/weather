@@ -23,7 +23,7 @@
   transition: 10s;
 }
 .modal {
-  margin: 14% auto;
+  margin: 10% auto;
   width: 80%;
   height: 500px;
   padding: 15px;
@@ -236,6 +236,12 @@
   height: 130vh;
   display: flex;
 }
+.box-icon>img{
+  width: auto !important;
+  height: auto!important;
+  display: none!important;
+  
+}
 }
 
 @media (min-width: 200px) and (max-width: 300px) {
@@ -258,5 +264,11 @@
     display: flex;
     align-items: center;
     text-align: center;
+  }
+  .box-icon>img{
+    width: auto !important;
+    height: auto!important;
+    display: none!important;
+    
   }
 }

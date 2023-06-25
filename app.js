@@ -39,9 +39,10 @@ function myfunc(e) {
         h1.innerHTML = `<div class="box-data">
                         <h2 style="color:crimson; style="margin-bottom: 15px;"">${data.location.name}</h2>
                         <img src="${data.current.condition.icon}" alt="" style="width: 100px;
-                            height: 100px;
-                            display: flex;
-                            border-radius: 100%;">  
+                        height: 100px;
+                        display: flex;
+                        background-color:rgba(140, 0, 255, 0.336);
+                        border-radius: 100%;">  
                         <h3 style="margin-bottom: 15px;">Country : ${data.location.country}</h3>
                         <h3 style="margin-bottom: 15px;">Weather :  ${data.current.condition.text}</h3>
                         <div class="time"  style="margin-bottom: 15px;">
