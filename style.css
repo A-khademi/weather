@@ -53,13 +53,6 @@
 .inp:hover {
   background-color: rgba(0, 0, 0, 0.637);
 }
-.box-icon>img{
-  width: 150px;
-  height: 150px;
-  display: flex;
-  display: none;
-}
-
 .f,
 .c {
   display: flex;
