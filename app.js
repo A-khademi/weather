@@ -24,11 +24,14 @@ inp.addEventListener("keyup", myfunc);
 function myfunc(e) {
   if (e.keyCode === 13) {
     loder.style = "display:block";
-    h1.innerHTML='<div class="lds-ripple d-flex"><div></div><div></div></div>'
+    h1.innerHTML =
+      '<div class="lds-ripple d-flex"><div></div><div></div></div>';
     let val = inp.value;
     inp.value = "";
     console.log(val);
-    fetch(`https://api.weatherapi.com/v1/current.json?key=fc80bd11766e45f3b6b93347231406&q=${val}&aqi=no`)
+    fetch(
+      `https://api.weatherapi.com/v1/current.json?key=fc80bd11766e45f3b6b93347231406&q=${val}&aqi=no`
+    )
       .then((res) => {
         return res.json();
       })
@@ -38,26 +41,22 @@ function myfunc(e) {
         h1.style = "width: 100%";
         h1.innerHTML = `<div class="box-data">
                         <h2 style="color:crimson; style="margin-bottom: 15px;"">${data.location.name}</h2>
-                        <img src="${data.current.condition.icon}" alt="" style="width: 100px;
-                        height: 100px;
-                        display: flex;
-                        background-color:rgba(140, 0, 255, 0.336);
-                        border-radius: 100%;">  
+                        <img class="img" src="${data.current.condition.icon}" alt="">  
                         <h3 style="margin-bottom: 15px;">Country : ${data.location.country}</h3>
                         <h3 style="margin-bottom: 15px;">Weather :  ${data.current.condition.text}</h3>
                         <div class="time"  style="margin-bottom: 15px;">
-                            <span style="padding-right: 40px;">Localtime: ${data.location.localtime}</span>
+                            <span class="Localtime">Localtime: ${data.location.localtime}</span>
                             <span>UV: ${data.current.uv}</span>
                         </div>
                         <div class="border-image-clip-path">
-                            <div class="c"  style="margin-bottom: 15px;">
+                            <div class="c">
                                 <span style="padding-right: 20px;">Temp_c  :  ${data.current.temp_c}</span>
-                                <span style="padding-right: 20px;">Feelslike_c : ${data.current.feelslike_c}</span>
+                                <span class="Feelslike_c" style="padding-right: 20px;">Feelslike_c : ${data.current.feelslike_c}</span>
                                 <span>wind_kph: ${data.current.wind_kph}</span>
                             </div>
-                            <div class="f" style="margin-bottom: 15px;">
+                            <div class="f">
                                 <span style="padding-right: 20px;">Temp_f  :  ${data.current.temp_f} </span>
-                                <span style="padding-right: 20px;">Feelslike_f : ${data.current.feelslike_f}</span>
+                                <span class="Feelslike_f" style="padding-right: 20px;">Feelslike_f : ${data.current.feelslike_f}</span>
                                 <span>wind_mph : ${data.current.wind_mph}</span>
                             </div>
                         </div>
@@ -67,7 +66,7 @@ function myfunc(e) {
       .catch((error) => {
         loder.style = "display:none";
         h1.style = "opacity:1";
-        h1.innerText=`No information received, please enter the city name again.`
+        h1.innerText = `No information received, please enter the city name again.`;
         console.log(error);
       });
   }
