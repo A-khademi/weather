@@ -163,15 +163,15 @@
 
 @media (min-width: 276px) and (max-width: 576px) {
   .inp {
-    top: 30px;
-    width: 220px;
-    height: 40px;
+    top: 50px;
+    width: 280px;
+    height: 50px;
     font-size: 16px;
   }
   .modal {
     margin: 25% auto;
     width: 95%;
-    height: 450px;
+    height: 620px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -179,10 +179,11 @@
   .h1 {
     font-size: medium;
     align-items: stretch;
+    font-size: 25px;
   }
   .c,
   .f {
-    font-size: 14px;
+    font-size: 17px;
     padding-right: 0px;
     margin-bottom: 0px;
     display: flex;
@@ -193,8 +194,8 @@
     display: none;
   }
   .img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     display: flex;
     margin-left: 50%;
     transform: translateX(-50%);
